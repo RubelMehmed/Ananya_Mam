@@ -1,3 +1,5 @@
+// input from user to calculate
+
 const calculate = (p, q, r) => {
   const add = p + q + r;
   document.write("Add = " + add + "<br/>");
