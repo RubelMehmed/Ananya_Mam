@@ -1,4 +1,4 @@
-// input from user to calculate
+// input from user to calculate ##### ********=================================================================
 
 const calculate = (p, q, r) => {
   const add = p + q + r;
