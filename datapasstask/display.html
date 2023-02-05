@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Data Display</title>
+  </head>
+  <body>
+    <h1>Student Data</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td id="name"></td>
+        <td id="age"></td>
+        <td id="email"></td>
+      </tr>
+    </table>
+
+    <script>
+      // Get the stored data from local storage
+      var name = localStorage.getItem("studentName");
+      var age = localStorage.getItem("studentAge");
+      var email = localStorage.getItem("studentEmail");
+
+      // Update the table cells with the stored data
+      document.getElementById("name").innerHTML = name;
+      document.getElementById("age").innerHTML = age;
+      document.getElementById("email").innerHTML = email;
+    </script>
+  </body>
+</html>

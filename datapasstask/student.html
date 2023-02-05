@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Data Input</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      a {
+        align-items: flex-end;
+      }
+      button {
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      form {
+        width: 400px;
+        margin: 0 auto;
+        text-align: left;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        animation: form-appear 0.5s ease-in-out;
+      }
+
+      @keyframes form-appear {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      label,
+      input {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      input[type="text"],
+      input[type="number"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus,
+      input[type="email"]:focus {
+        border-color: #4caf50;
+        box-shadow: 0px 0px 10px rgba(76, 175, 80, 0.5);
+      }
+
+      input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      input[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Data Input</h1>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="nameInput" name="name" /><br /><br />
+      <label for="age">Age:</label>
+      <input type="number" id="ageInput" name="age" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="emailInput" name="email" /><br /><br />
+      <input type="button" value="Submit" onclick="storeData()" />
+    </form>
+
+    <script>
+      function storeData() {
+        // Get the input values
+        var name = document.getElementById("nameInput").value;
+        var age = document.getElementById("ageInput").value;
+        var email = document.getElementById("emailInput").value;
+
+        // Store the data in local storage
+        localStorage.setItem("studentName", name);
+        localStorage.setItem("studentAge", age);
+        localStorage.setItem("studentEmail", email);
+      }
+    </script>
+
+    <br /><br />
+    <button>
+      <a href="display.html">View Student Data</a>
+    </button>
+  </body>
+</html>
