@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>task</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      /* Form styles */
+      form {
+        width: 50%;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        box-shadow: 2px 2px 5px #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      input[type="button"] {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="button"]:hover {
+        background-color: #3e8e41;
+      }
+      /* Table styles */
+      table {
+        width: 50%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Data Input</h1>
+    <form action="" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="nameInput" name="name" /><br /><br />
+      <label for="age">Age:</label>
+      <input type="number" id="ageInput" name="age" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="emailInput" name="email" /><br /><br />
+      <input type="button" value="Submit" onclick="displayData()" />
+    </form>
+
+    <h1>Student Data</h1>
+    <table id="studentDataTable">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+      </tr>
+    </table>
+
+    <script>
+      function displayData() {
+        // Get the input values
+        var name = document.getElementById("nameInput").value;
+        var age = document.getElementById("ageInput").value;
+        var email = document.getElementById("emailInput").value;
+
+        // Create a new table row
+        var table = document.getElementById("studentDataTable");
+        var row = table.insertRow();
+        row.insertCell().innerHTML = name;
+        row.insertCell().innerHTML = age;
+        row.insertCell().innerHTML = email;
+      }
+    </script>
+  </body>
+</html>

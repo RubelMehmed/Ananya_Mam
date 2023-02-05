@@ -1,0 +1,30 @@
+form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2em;
+    border: 1px solid gray;
+    border-radius: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>hi , how do you do</h1>
+    <h2></h2>
+    <h3></h3>
+    <button id="btn0">carry</button>
+    <button id="btn" onclick="myfunction()">Remove Parents</button>
+    <button id="btn1">Give Me Title</button>
+    <button id="btn2">Submit Param</button>
+    <input type="text" name="" id="inp" />
+    <p id="demo"></p>
+    <script>
+      let h1 = document.querySelector("h1");
+      let h2 = document.querySelector("h2");
+      let h3 = document.querySelector("h3");
+
+      let btn = document.querySelector("#btn0");
+      let btn1 = document.querySelector("#btn1");
+      let inp = document.querySelector("#inp");
+      let p = document.querySelector("#demo");
+      let btn2 = document.querySelector("#btn2");
+
+      function myfunction() {
+        h1.innerHTML = "Hello Programmaers!";
+        h1.style.color = "red";
+        h3.innerHTML = "";
+      }
+
+      btn.addEventListener("click", () => {
+        h1.innerHTML = "Hello World";
+        h1.style.color = "green";
+      });
+
+      inp.addEventListener("keyup", (e) => {
+        p.innerHTML = inp.value;
+      });
+
+      btn1.addEventListener("click", (e) => {
+        h2.innerHTML = p.innerHTML;
+        p.innerHTML = "";
+      });
+
+      btn2.addEventListener("click", (e) => {
+        p.className = "demo";
+        h3.appendChild(p);
+      });
+    </script>
+  </body>
+</html>
